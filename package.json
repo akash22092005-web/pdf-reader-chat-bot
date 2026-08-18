@@ -2,9 +2,15 @@
   "name": "pdf-reader-chat-bot",
   "version": "1.0.0",
   "private": true,
+  "workspaces": [
+    "frontend"
+  ],
   "scripts": {
-    "dev": "npm --prefix frontend run dev",
+    "dev": "cd frontend && npm run dev",
     "build": "cd frontend && npm install && npm run build",
-    "preview": "npm --prefix frontend run preview"
+    "preview": "cd frontend && npm run preview"
+  },
+  "devDependencies": {
+    "vite": "^5.3.1"
   }
 }
