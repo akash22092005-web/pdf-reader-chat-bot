@@ -1,5 +1,5 @@
 {
-  "installCommand": "test -d frontend && cd frontend || true; npm install && chmod +x node_modules/.bin/* || true",
-  "buildCommand": "test -d frontend && cd frontend || true; npx vite build",
-  "outputDirectory": "dist"
+  "installCommand": "npm --prefix frontend install && chmod +x frontend/node_modules/.bin/* || true",
+  "buildCommand": "npm --prefix frontend run build",
+  "outputDirectory": "frontend/dist"
 }
