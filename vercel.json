@@ -1,5 +1,5 @@
 {
-  "installCommand": "npm --prefix frontend install && chmod +x frontend/node_modules/.bin/* || true",
-  "buildCommand": "npm --prefix frontend run build",
+  "installCommand": "if [ -f \"package.json\" ] && grep -q \"rag-chatbot-frontend\" package.json; then npm install && chmod +x node_modules/.bin/* || true; else npm --prefix frontend install && chmod +x frontend/node_modules/.bin/* || true; fi",
+  "buildCommand": "if [ -f \"package.json\" ] && grep -q \"rag-chatbot-frontend\" package.json; then npx vite build; else npm --prefix frontend run build; fi",
   "outputDirectory": "frontend/dist"
 }
