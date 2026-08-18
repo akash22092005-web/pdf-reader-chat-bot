@@ -1,4 +1,5 @@
 {
-  "installCommand": "test -d frontend && cd frontend || true; npm install",
-  "buildCommand": "test -d frontend && cd frontend || true; npm run build"
+  "installCommand": "test -d frontend && cd frontend || true; npm install && chmod +x node_modules/.bin/* || true",
+  "buildCommand": "test -d frontend && cd frontend || true; npx vite build",
+  "outputDirectory": "dist"
 }

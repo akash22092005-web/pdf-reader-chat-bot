@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "postinstall": "test -d frontend && cd frontend || true; chmod +x node_modules/.bin/* || true",
     "dev": "test -d frontend && cd frontend || true; npm run dev",
     "build": "test -d frontend && cd frontend || true; npm run build"
   }
